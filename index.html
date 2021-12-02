@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>CSS GAME</title>
+	<title>BLINK GAME</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+	<h1>B<span>L</span>INK GAM<span>E</span></h1>
 	<div class="container">
 		<div></div>
 		<div></div>
@@ -62,8 +63,20 @@
 		<div></div>
 		<div></div>
 	</div>
-	<div>score: <span id="score"></span></div>
+	<div id="score">SCORE: <span id="points">0</span></div>
+	<div id="rules"><b>How to play:</b>
+		<ul>
+			<li>click on the yellow dot, which represents a light</li>
+			<li>each time the light is on for 1 second </li>
+			<li>clicking black dot ends the game</li>
+			<li>not clicking a light on time ends the game</li>
+			<li>your score is a number of lights clicked on time</li>
+			<li>there is no time limit - you play until you lose</li>
+		</ul>
+		<b>Enjoy!</b>
+	</div>
 	<div id="result"></div>
+	<a id="again" href="https://folatkom.github.io/blink-game/"></a>
 	<script src = "jquery-3.6.0.min.js"></script>
 	<script src="script.js"></script>
 </body>

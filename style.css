@@ -1,8 +1,25 @@
+body{
+	background-color: gray;
+	text-align: center;
+	font-family: calibri;
+	font-size: 1.1em;
+	padding: 20px;
+	font-weight: 400;
+}
+h1{
+	letter-spacing: 5px;
+}
+h1 span{
+	color: yellow;
+}
 .container{
 	display: grid;
 	grid-template-columns: repeat(7,50px);
 	grid-template-rows: repeat(7,50px);
 	grid-gap: 5px;
+	width: 100%;
+	justify-content: center;
+	
 }
 .ball{
 	border-radius: 50%;
@@ -12,5 +29,35 @@
 	margin: auto;
 }
 .color{
-	background-color: red;
+	background-color: yellow;
+}
+ul{
+	margin: auto;
+	max-width: 350px;
+	text-align: justify;
+}
+#result, #score{
+	margin: 10px;
+	color: yellow;
+	font-weight: 600;
+	letter-spacing: 2px;
+}
+#rules{
+	background: linear-gradient(180deg, white, gray);
+	max-width: 400px;
+	padding: 10px;
+	margin: auto;
+	border: 2px solid black;
+	border-radius: 15px;
+}
+#again{
+	background-color: yellow;
+	width: 100px;
+	border-radius: 5px;
+	margin: auto;
+	text-decoration: none;
+	color: #404040;
+}
+#again:hover{
+
 }

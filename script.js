@@ -1,23 +1,36 @@
 let num;
 let ballNr;
-let score = 0
-
+let points = 0;
+let clicked = false;
 function colorBall(){
-	$("#score").html(score);
+	$("#points").html(points);
 	$(ballNr).removeClass('color');
 	num = Math.ceil(Math.random()*37);
 	ballNr = "#ball" + num;
 	$(ballNr).addClass('color');
 	$(".ball").click(function (){
-		if ($(this).attr('id')=="ball" + num) {
-			score += 1;
+		clicked = true
+		if ($(this).attr('id') == "ball" + num) {
+			points += 1;
 			$(ballNr).removeClass('color');	 
 		}
 		else{
-			$("#result").html("you lose");
-			clearInterval(timer);
+			lost();
 		}
 		$(".ball").unbind(); //remove click event listener
 	})
+	let timer1 = setTimeout(fal,1000)
+	
 }
 let timer = setInterval(colorBall,1000);
+function fal(){
+	if(clicked == false){
+		lost();
+	}
+	clicked = false;
+}
+function lost(){
+	$("#result").html("YOU LOST");
+	clearInterval(timer);
+	$("#again").html("&nbspTry again&nbsp");
+}
