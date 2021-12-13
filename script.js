@@ -2,6 +2,8 @@ let num;
 let ballNr;
 let points = 0;
 let clicked = false;
+let interval = 1000;
+let timer;
 function colorBall(){
 	$("#points").html(points);
 	$(ballNr).removeClass('color');
@@ -20,9 +22,12 @@ function colorBall(){
 		$(".ball").unbind(); //remove click event listener
 	})
 	let timer1 = setTimeout(fal,1000)
-	
+	clearInterval(timer);
+	interval-=25;
+	timer = setInterval(colorBall,interval);
 }
-let timer = setInterval(colorBall,1000);
+window.onload=colorBall;
+
 function fal(){
 	if(clicked == false){
 		lost();
