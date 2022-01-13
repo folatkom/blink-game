@@ -3,7 +3,6 @@
 ## Table of content
 * General info
 * Technologies
-* Setup
 
 ## General info
 This project contains a simulation of a simple game consisting in clicking on a moving light in time. 
@@ -12,6 +11,3 @@ Every right click adds one point to the score.
 
 ## Technologies
 Project is created with HTML, CSS, JavaScript and jQuery.
-
-## Setup
-To run this project, you should have Node.js and npm installed.
